@@ -1,5 +1,5 @@
 # esx_hidecar
-GTA5 - Hide your stolen cars and then tranfer the titles to you
+GTA5 - Hide your stolen cars and then transfer the titles to you
 
 Needs:
 esx
