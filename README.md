@@ -35,5 +35,7 @@ If you want to change how much it cost to transfer the title, modify line 51 and
 client\main.lua
 
 
-If you want to change how much you get for a chopped vehicle, modify lines 238,254,270,286,305,321,338 and 354 
+If you want to change how much you get for a chopped vehicle, modify lines 238,254,270,286,305,321,338 and 354
+
+
 To change the the location of the Document Forgery Office, modify line 166
