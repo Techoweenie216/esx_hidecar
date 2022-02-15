@@ -23,7 +23,7 @@ end)
 
 RegisterCommand('hidecar', function(source, args)
 		
-	local ped = GetPlayerPed(-1)
+	local ped = PlayerPedId()
 	local playerCoords = GetEntityCoords(ped)
 	local heading = GetEntityHeading(ped)
 	local x,y,z = table.unpack(GetEntityCoords(ped, true))
@@ -43,7 +43,7 @@ end)
 
 RegisterNetEvent('esx_hidecar:CoverVehicle')
 AddEventHandler('esx_hidecar:CoverVehicle', function(source,args)
-	local ped = GetPlayerPed(-1)
+	local ped = PlayerPedId()
 	local vehicle = GetVehiclePedIsIn(ped, false)
 	local class = GetVehicleClass(vehicle)
 	local x,y,z = table.unpack(GetEntityCoords(ped, true))
@@ -170,7 +170,7 @@ function fixDMVFiles()
 		if IsControlJustReleased(0, 74) then 
 			local dict = 'missheist_jewel@hacking'
 			local anim = 'hack_loop'
-			local ped = GetPlayerPed(-1)
+			local ped = PlayerPedId()
 			local time = 2500
 			--play hacking animation
 			RequestAnimDict(dict)
@@ -356,7 +356,7 @@ function checkClassOfCar(class)
 end
 
 function chopcar()
-	local ped = GetPlayerPed(-1)
+	local ped = PlayerPedId()
 	local markerPos = vector3(2340.852, 3126.44, 48.21)
 	vehicle = GetLastDrivenVehicle(ped)
 	class = GetVehicleClass(vehicle)
@@ -420,7 +420,7 @@ Citizen.CreateThread(function()
 
    while true do
 	Citizen.Wait(1)
-	local ped = GetPlayerPed(-1)
+	local ped = PlayerPedId()
 	local playerCoords = GetEntityCoords(ped)
 	local DMVdistance = #(playerCoords - DMVmarkerPos)
 	local Scrapdistance = #(playerCoords - ScrapmarkerPos)
